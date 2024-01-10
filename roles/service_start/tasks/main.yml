@@ -3,6 +3,6 @@
   become: yes
   tasks:
     - name: Start the service
-      systemd:
+      ansible.builtin.systemd_service:
         name: "{{ service_name }}"
         state: started
