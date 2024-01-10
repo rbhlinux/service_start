@@ -1,8 +1,5 @@
 ---
-- name: Start a Service
-  become: yes
-  tasks:
-    - name: Start the service
-      ansible.builtin.systemd_service:
-        name: "{{ service_name }}"
-        state: started
+- name: Start the service
+  ansible.builtin.systemd_service:
+    name: "{{ service_name }}"
+    state: started
